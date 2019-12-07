@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>新規作成</h1>
+
+<form action="/add" method="POST">
+    <input type="text" size="100" maxlength="100" name="task">
+    <!-- <input type="text" size="100" maxlengah="100" name="user_id"> -->
+    <input type="submit" name="save" value="送信">
+</form>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>削除</h1>
+<p>本当に削除しますか？</p>
+<ul>
+    <li>id: {{item.id}}</li>
+    <li>タスク: {{item.task}}</li>
+</ul>
+
+<form action="/del" method="POST">
+    <input type="hidden" value="{{item.id}}" name="id">
+    <input type="submit" name="save" value="削除する">
+</form>
+
+{% endblock %}
